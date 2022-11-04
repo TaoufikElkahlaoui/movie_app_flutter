@@ -11,24 +11,18 @@ class GridLanguage extends GetView<LocalizationController> {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
+    return ListView.builder(
       physics: const BouncingScrollPhysics(),
       shrinkWrap: true,
-      gridDelegate:
-          const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 1),
       itemCount: Lang.languageList.length,
       itemBuilder: (context, i) => Container(
         margin: const EdgeInsets.symmetric(vertical: 10),
         decoration: BoxDecoration(
-          color: AppColor.mainColor.withOpacity(.7),
-          borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(10),
-              topRight: Radius.circular(10),
-              bottomLeft: Radius.circular(10),
-              bottomRight: Radius.circular(10)),
+          color: AppColor.mainColor.withOpacity(.8),
+          borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(
-              color: const Color.fromARGB(255, 173, 173, 173).withOpacity(0.5),
+              color: const Color.fromARGB(255, 173, 173, 173).withOpacity(0.7),
               spreadRadius: 5,
               blurRadius: 7,
               offset: const Offset(0, 3), // changes position of shadow
@@ -42,6 +36,7 @@ class GridLanguage extends GetView<LocalizationController> {
           },
           title: Lang.languageList[i]["text"],
           subtitle: Lang.languageList[i]["displayName"],
+          image: Lang.languageList[i]["image"],
         ),
       ),
     );

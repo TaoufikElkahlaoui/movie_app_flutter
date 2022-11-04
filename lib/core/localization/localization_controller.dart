@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:movie_app/core/services/services.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+
 
 class LocalizationController extends GetxController {
   AppService appService = Get.find();
@@ -25,5 +27,7 @@ class LocalizationController extends GetxController {
       language = Locale(lang);
     }
     super.onInit();
+        FlutterNativeSplash.remove();
+
   }
 }

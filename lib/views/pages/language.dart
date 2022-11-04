@@ -9,28 +9,24 @@ class Language extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: const AssetImage(AppImageAsset.onboardingFive),
-            fit: BoxFit.cover,
-            colorFilter: ColorFilter.mode(
-                Colors.black.withOpacity(0.5), BlendMode.hardLight),
+      body: ListView(
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+        physics: const BouncingScrollPhysics(),
+        shrinkWrap: true,
+        children: [
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: Image.asset(AppImageAsset.languageBanner, fit: BoxFit.cover),
           ),
-        ),
-        child: ListView(
-          padding:
-              const EdgeInsets.only(top: 130, bottom: 50, right: 50, left: 50),
-          shrinkWrap: true,
-          physics: const BouncingScrollPhysics(),
-          children: const [
-            TitleLanguage(),
-            SizedBox(
-              height: 40,
-            ),
-            GridLanguage(),
-          ],
-        ),
+          const SizedBox(
+            height: 20,
+          ),
+          const TitleLanguage(),
+          const SizedBox(
+            height: 20,
+          ),
+          const GridLanguage(),
+        ],
       ),
     );
   }

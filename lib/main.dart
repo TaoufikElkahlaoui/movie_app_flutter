@@ -25,7 +25,6 @@ class MyApp extends StatelessWidget {
     FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
     LocalizationController controller = Get.put(LocalizationController());
 
-    FlutterNativeSplash.remove();
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Movie app',
