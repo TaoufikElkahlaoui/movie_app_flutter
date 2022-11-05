@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:movie_app/controllers/onboarding_controller.dart';
+import 'package:movie_app/core/constants/style.dart';
 import 'package:movie_app/data/datasource/static/static.dart';
 
 class NavigationButton extends StatelessWidget {
@@ -40,7 +41,7 @@ class NavigationButton extends StatelessWidget {
                             textAlign: TextAlign.center,
                             style: const TextStyle(
                               color: Colors.white,
-                              fontFamily: "Poppins",
+                              fontFamily: AppStyle.fontFamily,
                               letterSpacing: .7,
                             ),
                           )
@@ -49,7 +50,7 @@ class NavigationButton extends StatelessWidget {
                             textAlign: TextAlign.center,
                             style: const TextStyle(
                               color: Colors.white,
-                              fontFamily: "Poppins",
+                              fontFamily: AppStyle.fontFamily,
                               letterSpacing: .7,
                             ),
                           ),

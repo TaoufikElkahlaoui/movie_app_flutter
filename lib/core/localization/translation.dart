@@ -29,6 +29,24 @@ class AppTranslation extends Translations {
           "offline_text":
               "Regardez vos films préférés n'importe où \n sans connexion Internet",
           // onboarding
+
+          //auth
+          'signin': 'Se Connecter',
+          'signup': "S'Inscrire",
+
+          'email': "Email",
+          'password': "Mot de passe",
+
+          "welcome_back": "Bon retour",
+
+          "signin_text":
+              "Connectez-vous avec votre adresse électronique et votre mot de passe ou continuez avec les médias sociaux.",
+          "enter_your_email": "Entrez votre adresse e-mail",
+          "enter_your_password": "Entrez votre mot de passe",
+          //auth
+          "forgot_password": "Mot de passe oublié ?",
+          "continue": "Continuer",
+          "dont_have_account": "vous n'avez pas de compte ?",
         },
         'en': {
           //choose lang
@@ -54,8 +72,23 @@ class AppTranslation extends Translations {
           "offline": "OFFLINE",
           "offline_text":
               "Watch your favorite movies anywhere \n without an internet connection",
-
           // onboarding
+
+          //auth
+          'signin': 'Sign In',
+          'signup': 'Sign Up',
+          'email': "Email",
+          'password': "Password",
+          "welcome_back": "Welcome Back",
+          "signin_text":
+              "Sign in with your email and password \n or continue with social media",
+          "enter_your_email": "Enter your email address",
+          "enter_your_password": "Enter your password",
+          "forgot_password": "Forgot Password?",
+          "continue": "Continue",
+          "dont_have_account": "You don't have an account?",
+
+          //auth
         },
         'ar': {
           //choose lang
@@ -81,6 +114,23 @@ class AppTranslation extends Translations {
           "offline_text":
               "شاهد أفلامك المفضلة في أي مكان \n بدون اتصال بالإنترنت",
           // onboarding
+
+          //auth
+          'signin': 'تسجيل الدخول',
+          'signup': "إنشاء حساب",
+          'email': "البريد الإلكتروني",
+          'password': "كلمه السر",
+
+          "welcome_back": "مرحبًا بعودتك",
+          "signin_text":
+              "قم بتسجيل الدخول باستخدام بريدك الإلكتروني وكلمة المرور أو تابع وسائل التواصل الاجتماعي",
+          "enter_your_email": "أدخل عنوان البريد الإلكتروني الخاص بك",
+          "enter_your_password": "أدخل كلمة المرور",
+          "forgot_password": "هل نسيت كلمة السر ؟",
+          "continue": "واصل",
+          "dont_have_account": "لا يوجد لديك حساب ؟",
+
+          //auth
         },
       };
 }

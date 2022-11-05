@@ -7,7 +7,6 @@ import 'package:movie_app/routes.dart';
 import 'package:movie_app/views/pages/language.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initServices();
@@ -15,7 +14,6 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-
   const MyApp({super.key});
 
   // This widget is the root of your application.
@@ -32,19 +30,7 @@ class MyApp extends StatelessWidget {
       routes: routes,
       translations: AppTranslation(),
       locale: controller.language,
-      // theme: ThemeData(
-      //   textTheme: const TextTheme(
-      //       // bodyText2: TextStyle(
-      //       //     color: Colors.white,
-      //       //     fontSize: 25,
-      //       //     fontWeight: FontWeight.w800,
-      //       //     fontFamily: "Poppins"),
-      //       button: TextStyle(
-      //     color: Colors.white,
-      //     fontFamily: "Poppins",
-      //     letterSpacing: .7,
-      //   )),
-      // ),
+      theme: ThemeData(),
     );
   }
 }

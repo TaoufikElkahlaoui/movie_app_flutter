@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_utils/get_utils.dart';
-import 'package:movie_app/core/constants/color.dart';
 import 'package:movie_app/core/constants/style.dart';
 
 class TitleLanguage extends StatelessWidget {

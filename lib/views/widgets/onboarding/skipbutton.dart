@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:movie_app/controllers/onboarding_controller.dart';
 import 'package:movie_app/core/constants/color.dart';
+import 'package:movie_app/core/constants/style.dart';
 import 'package:movie_app/data/datasource/static/static.dart';
 
 class SkipButtonOnBoarding extends StatelessWidget {
@@ -19,7 +20,7 @@ class SkipButtonOnBoarding extends StatelessWidget {
                 'go_home'.tr,
                 style: const TextStyle(
                     color: AppColor.textWhite,
-                    fontFamily: "Poppins",
+                    fontFamily: AppStyle.fontFamily,
                     letterSpacing: .7,
                     fontSize: 14),
               )
@@ -27,7 +28,7 @@ class SkipButtonOnBoarding extends StatelessWidget {
                 'skip'.tr,
                 style: const TextStyle(
                     color: AppColor.textWhite,
-                    fontFamily: "Poppins",
+                    fontFamily: AppStyle.fontFamily,
                     letterSpacing: .7,
                     fontSize: 14),
               ),

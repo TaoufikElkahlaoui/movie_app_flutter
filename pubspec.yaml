@@ -40,6 +40,7 @@ dependencies:
   http: ^0.13.5
   shared_preferences: ^2.0.15
   flutter_native_splash: ^2.2.13
+  flutter_svg: ^1.1.6
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +73,7 @@ flutter:
     - assets/images/svg/
     - assets/images/language/
     - assets/images/flag/
+    - assets/images/social/
     # C:\Users\DELL\StudioProjects\movie_app\assets\images\language
   #   - images/a_dot_ham.jpeg
 

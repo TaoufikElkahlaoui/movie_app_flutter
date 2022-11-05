@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:movie_app/controllers/onboarding_controller.dart';
+import 'package:movie_app/core/constants/style.dart';
 import 'package:movie_app/data/datasource/static/static.dart';
 
 class SliderOnBoarding extends GetView<OnBoardingControllerImpl> {
@@ -50,7 +51,7 @@ class SliderOnBoarding extends GetView<OnBoardingControllerImpl> {
                             color: Colors.white,
                             fontSize: 25,
                             fontWeight: FontWeight.w800,
-                            fontFamily: "Poppins"),
+                            fontFamily: AppStyle.fontFamily),
                       ),
                       const SizedBox(
                         height: 20,
@@ -62,7 +63,7 @@ class SliderOnBoarding extends GetView<OnBoardingControllerImpl> {
                           color: onboardingList[i].textColor,
                           fontSize: 15,
                           fontWeight: FontWeight.w400,
-                          fontFamily: "Poppins",
+                          fontFamily: AppStyle.fontFamily,
                         ),
                       ),
                       const SizedBox(
