@@ -17,7 +17,7 @@ class OnBoardingControllerImpl extends OnBoardingController {
   @override
   next() {
     if (currentSlider == onboardingList.length - 1) {
-      Get.offAllNamed(AppRoutes.login);
+      Get.offNamed(AppRoutes.login);
     } else {
       currentSlider++;
       pageController.animateToPage(currentSlider,

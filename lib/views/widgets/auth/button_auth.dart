@@ -16,7 +16,7 @@ class ButtonAuth extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-        padding: const EdgeInsets.symmetric(vertical: 15),
+        padding: const EdgeInsets.symmetric(vertical: 10),
         color: AppColor.mainColor,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         onPressed: onPressed,

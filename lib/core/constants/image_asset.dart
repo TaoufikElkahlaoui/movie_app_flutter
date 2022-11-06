@@ -19,12 +19,16 @@ class AppImageAsset {
 // auth
   static const String signin = '$rootAsset/svg/signin.svg';
   static const String signup = '$rootAsset/svg/signup.svg';
+  static const String signupcomplete = '$rootAsset/svg/signupcomplete.svg';
   static const String forgotpassword = '$rootAsset/svg/forgot_password.svg';
   static const String resetpassword = '$rootAsset/svg/reset_password.svg';
   static const String otp = '$rootAsset/svg/otp.svg';
+  static const String successresetpassword =
+      '$rootAsset/svg/success_resetpassword.svg';
+  static const String success = '$rootAsset/svg/success.svg';
 
-  static const String fb = '$rootAsset/social/facebook.png';
-  static const String google = '$rootAsset/social/google.png';
+  // static const String fb = '$rootAsset/social/facebook.png';
+  // static const String google = '$rootAsset/social/google.png';
 
 // auth
 }

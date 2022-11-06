@@ -16,6 +16,7 @@ class Language extends StatelessWidget {
         children: [
           SizedBox(
             width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height / 2 - 50,
             child: Image.asset(AppImageAsset.languageBanner, fit: BoxFit.cover),
           ),
           const TitleLanguage(),

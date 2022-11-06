@@ -15,7 +15,7 @@ class TitleAuth extends StatelessWidget {
     return Text(
       title,
       textAlign: TextAlign.center,
-      style: AppStyle.headline2,
+      style: AppStyle.headline2.copyWith(fontWeight: FontWeight.bold),
     );
   }
 }

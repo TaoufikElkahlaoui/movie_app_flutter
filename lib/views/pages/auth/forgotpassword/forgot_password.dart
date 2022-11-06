@@ -1,27 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:movie_app/controllers/auth/forgotpassword_controller.dart';
 import 'package:movie_app/core/constants/color.dart';
 import 'package:movie_app/core/constants/image_asset.dart';
+import 'package:movie_app/core/constants/routes.dart';
 import 'package:movie_app/core/constants/style.dart';
-import 'package:movie_app/views/widgets/auth/bottom_text_auth.dart';
+import 'package:movie_app/views/widgets/auth/signin_or_signup_text.dart';
 import 'package:movie_app/views/widgets/auth/button_auth.dart';
-import 'package:movie_app/views/widgets/auth/forgot_password.dart';
-import 'package:movie_app/views/widgets/auth/sociallinks_auth.dart';
 import 'package:movie_app/views/widgets/auth/text_auth.dart';
 import 'package:movie_app/views/widgets/auth/text_form_auth.dart';
 import 'package:movie_app/views/widgets/auth/title_auth.dart';
 
-class Login extends StatelessWidget {
-  const Login({super.key});
+class ForgotPassword extends StatelessWidget {
+  const ForgotPassword({super.key});
 
   @override
   Widget build(BuildContext context) {
+    ForgotPasswordControllerImpl controller =
+        Get.put(ForgotPasswordControllerImpl());
     return Scaffold(
       appBar: AppBar(
           centerTitle: true,
           title: Text(
-            'signin'.tr.toUpperCase(),
+            '',
             style: AppStyle.appBarTitle,
           ),
           backgroundColor: AppColor.textWhite,
@@ -36,60 +38,57 @@ class Login extends StatelessWidget {
             ),
           )),
       body: Container(
-        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
         child: ListView(
           physics: const BouncingScrollPhysics(),
           shrinkWrap: true,
           children: [
-            TitleAuth(title: 'welcome_back'.tr),
-            const SizedBox(
-              height: 10,
-            ),
-            TextAuth(text: "signin_text".tr),
             SizedBox(
-                height: 200,
+                height: 250,
                 child: SvgPicture.asset(
-                  AppImageAsset.signin,
+                  AppImageAsset.forgotpassword,
                   fit: BoxFit.cover,
                 )),
+            const SizedBox(
+              height: 30,
+            ),
+            TitleAuth(title: 'forgot_password'.tr),
+            const SizedBox(
+              height: 8,
+            ),
+            TextAuth(text: "forgot_password_text".tr),
             const SizedBox(
               height: 25,
             ),
             TextFormAuth(
-              hintText: "enter_your_email".tr, labelText: "email".tr,
-              icon: Icons.mail_outline_outlined,
-              //  controller: controller
+              controller: controller.email,
+              validator: (val) {},
+              hintText: "enter_your_email".tr,
+              labelText: "email".tr,
+              icon: Icons.alternate_email_outlined,
             ),
             const SizedBox(
-              height: 20,
+              height: 8,
             ),
-            TextFormAuth(
-              hintText: "enter_your_password".tr, labelText: "password".tr,
-              icon: Icons.remove_red_eye_outlined,
-              //  controller: controller
+            ButtonAuth(
+              text: "continue".tr,
+              onPressed: () {
+                controller.navigateToVerifyEmail();
+              },
             ),
             const SizedBox(
               height: 15,
             ),
-            const ForgotPasswordAuth(),
             const SizedBox(
-              height: 20,
+              height: 15,
             ),
-            ButtonAuth(
-              text: "continue".tr,
-              onPressed: () {},
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const SocialLinksAuth(),
-            const SizedBox(
-              height: 20,
-            ),
-            BottomTextAuth(
-              text: 'dont_have_account'.tr,
-              inkText: 'signup'.tr,
-              onTap: () {},
+            SignInOrSignUpTextAuth(
+              text: "already_have_account".tr,
+              inkText: 'signin'.tr,
+              onTap: () {
+                // controller.navigateToLogin();
+                Get.toNamed(AppRoutes.login);
+              },
             )
           ],
         ),

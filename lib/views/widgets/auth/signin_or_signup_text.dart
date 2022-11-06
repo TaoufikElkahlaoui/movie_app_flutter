@@ -3,16 +3,16 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/core/constants/style.dart';
 
-class BottomTextAuth extends StatelessWidget {
+class SignInOrSignUpTextAuth extends StatelessWidget {
   final String text;
   final String inkText;
-  final void Function()? onTap;
+  final void Function() onTap;
 
-  const BottomTextAuth({
+  const SignInOrSignUpTextAuth({
     Key? key,
     required this.text,
     required this.inkText,
-    this.onTap,
+    required this.onTap,
   }) : super(key: key);
 
   @override
@@ -20,16 +20,16 @@ class BottomTextAuth extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(text),
+        Text(text, style: AppStyle.textMedium),
         const SizedBox(
           width: 3,
         ),
         InkWell(
+          onTap: onTap,
           child: Text(
             inkText,
             style: AppStyle.headline1.copyWith(fontSize: 13),
           ),
-          onTap: onTap,
         )
       ],
     );

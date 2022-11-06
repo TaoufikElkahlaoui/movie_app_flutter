@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:movie_app/core/services/services.dart';
 import 'package:movie_app/core/localization/localization_controller.dart';
 import 'package:movie_app/core/localization/translation.dart';
-import 'package:movie_app/routes.dart';
+import 'package:movie_app/pages.dart';
 import 'package:movie_app/views/pages/language.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
@@ -27,7 +27,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Movie app',
       home: const Language(),
-      routes: routes,
+      defaultTransition: Transition.downToUp,
+      transitionDuration: const Duration(milliseconds: 600),
+      // routes: routes,
+      getPages: pages,
       translations: AppTranslation(),
       locale: controller.language,
       theme: ThemeData(),
